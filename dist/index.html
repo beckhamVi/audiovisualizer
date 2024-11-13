@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Spotify</title>
+    <link rel="stylesheet" href="/index.4ee4707b.css">
+</head>
+<body>
+    
+    <!-- Contenido principal -->
+    <div class="content-wrapper">
+        <div class="primero">
+            <h1>¿Cómo te sientes hoy?</h1>
+            <input type="text" id="song-input" placeholder="Ejm: Ando alegre, me gusta el rock alternativo">
+            <button id="search-button">Buscar recomendaciones</button>
+            <div class="song-info" id="song-info"></div>
+        </div>
+        
+        <div class="segundo">
+            <h3>generado por ia</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto laboriosam enim veritatis illo facere necessitatibus nesciunt quo non provident deserunt quia quidem est, aperiam similique! Eius tempora doloremque ab reiciendis.</p>
+        </div>
+
+        <div class="tercero">
+            <h3>recomendaciones</h3>
+            <div class="recommendations" id="recommendations"></div>
+        </div>
+
+        <!-- Barra de reproducción personalizada -->
+        <div class="cuarto">
+            <div class="music-player">
+                <div class="music-player__song-info">
+                    <img src="/primer.8045f3a7.jpg" alt="Album Cover" class="img-song-info" id="album-cover">
+                    <div class="song-details">
+                        <h4 id="track-title">Canción</h4>
+                        <p id="track-artist">Artista</p>
+                    </div>
+                </div>
+
+                <div class="centro">
+                    <div class="controls">
+                        <button class="control-button" id="shuffleButton">🔀</button>
+                        <button class="control-button" id="prevButton">⏮️</button>
+                        <button class="control-button play-pause-button" id="playPauseButton">▶️</button>
+                        <button class="control-button" id="nextButton">⏭️</button>
+                        <button class="control-button" id="repeatButton">🔁</button>
+                    </div>
+
+                    <div class="progress-container">
+                        <span id="currentTime">0:00</span>
+                        <div class="progress-bar">
+                            <div class="progress" id="progress"></div>
+                        </div>
+                        <span id="duration">0:00</span>
+                    </div>
+                </div>
+
+                <div class="extra-controls">
+                    <button class="extra-button">🔊</button>
+                    <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+                    <a href="/player.html" class="extra-button fullscreen">⛶</a>
+                </div>
+            </div>
+        </div>
+
+        <audio id="audio"></audio>
+    </div> <!-- Cerrando el div `content-wrapper` correctamente -->
+
+    <script src="/index.aa69868b.js"></script>
+<script src="/audiovisualizer%20-%20copia%20-%20copia%20-%20copia.59712999.js"></script></body>
+</html>

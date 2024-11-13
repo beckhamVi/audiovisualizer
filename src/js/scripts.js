@@ -131,3 +131,21 @@ window.addEventListener('resize', function() {
     renderer.setSize(window.innerWidth, window.innerHeight);
 	bloomComposer.setSize(window.innerWidth, window.innerHeight);
 });
+
+function loadTrackFromStorage() {
+	const currentTrack = JSON.parse(localStorage.getItem("currentTrack"));
+	
+	if (currentTrack) {
+		document.getElementById("track-title").textContent = currentTrack.name;
+		document.getElementById("track-artist").textContent = currentTrack.artist;
+		document.getElementById("album-cover").src = currentTrack.albumCover;
+		const audio = document.getElementById("audio");
+		audio.src = currentTrack.previewUrl;
+		audio.play();
+	} else {
+		console.error("No hay datos de la canción en localStorage");
+	}
+}
+
+// Llama a la función al cargar la página
+window.onload = loadTrackFromStorage;
